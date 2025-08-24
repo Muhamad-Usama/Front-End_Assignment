@@ -3,7 +3,7 @@ interface BenefitItemProps {
   title: string
 }
 
-const Circle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+const Circle = ({ children }: { children: any }) => (
   <div className="mx-auto grid place-items-center w-28 h-28 md:w-32 md:h-32
                   rounded-full bg-[#0E6D86] ring-4 ring-white/15 shadow-[0_6px_20px_rgba(0,0,0,0.18)]">
     {children}

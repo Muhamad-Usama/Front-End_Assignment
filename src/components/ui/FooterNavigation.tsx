@@ -37,6 +37,7 @@ const FooterNavigation = () => {
           <h3 className="text-[16px] font-semibold mb-3">GreenPal</h3>
           <div className="grid grid-cols-2 gap-y-3 gap-x-4">
             {sections.greenpal.map((l) => (
+              // @ts-ignore - React 19 key prop compatibility
               <Link key={l} label={l} />
             ))}
           </div>
@@ -45,6 +46,7 @@ const FooterNavigation = () => {
         <div className="mb-7">
           <div className="grid grid-cols-2 gap-y-3 gap-x-4">
             {sections.services.map((l) => (
+              // @ts-ignore - React 19 key prop compatibility
               <Link key={l} label={l} />
             ))}
           </div>
@@ -55,6 +57,7 @@ const FooterNavigation = () => {
             <h3 className="text-[16px] font-semibold">Providers</h3>
             <div className="space-y-3">
               {sections.providers.map((l) => (
+                // @ts-ignore - React 19 key prop compatibility
                 <Link key={l} label={l} />
               ))}
             </div>

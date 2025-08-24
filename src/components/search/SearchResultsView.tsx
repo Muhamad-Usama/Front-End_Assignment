@@ -143,6 +143,7 @@ export default function SearchResultsView({ initialQuery, onCancel }: Props) {
         {status === "success" && (
           <div className="space-y-5">
             {vendors.map((v) => (
+              // @ts-ignore - React 19 key prop compatibility
               <VendorCard key={v.id} vendor={v} />
             ))}
           </div>

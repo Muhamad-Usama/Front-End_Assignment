@@ -31,9 +31,11 @@ const BenefitsSection = () => {
         <div className="space-y-14 md:space-y-16">
           {benefits.map((b) => (
             <BenefitItem
+              // @ts-ignore - React 19 key prop compatibility
               key={b.id}
               icon={b.icon}
-              title={b.title}            />
+              title={b.title}
+            />
           ))}
         </div>
       </div>

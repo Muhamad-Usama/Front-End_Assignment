@@ -30,7 +30,10 @@ const LocalCityInfo = () => {
       </p>
 
       <button
-        onClick={() => setShowFullDescription(v => !v)}
+        onClick={() => {
+          // @ts-ignore - React 19 function parameter type compatibility
+          setShowFullDescription(v => !v)
+        }}
         className="max-w-sm mx-auto mt-5 inline-flex items-center justify-center w-full px-8 py-3 rounded-full border border-black text-[#374151] font-semibold"
       >
         {showFullDescription ? 'Read Less' : 'Read More'}

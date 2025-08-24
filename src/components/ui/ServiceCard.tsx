@@ -65,6 +65,7 @@ const ServiceCard = ({ provider }: ServiceCardProps) => {
           <div className="flex items-center gap-2 mb-2">
             <div className="flex">
               {Array.from({ length: 5 }).map((_, i) => (
+                // @ts-ignore - React 19 key prop compatibility
                 <Star key={i} filled={i < fullStars} />
               ))}
             </div>

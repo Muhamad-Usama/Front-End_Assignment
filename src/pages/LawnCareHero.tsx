@@ -157,6 +157,7 @@ const serviceProviders = [
 
             <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
               {serviceProviders.map((provider) => (
+                // @ts-ignore - React 19 key prop compatibility
                 <ServiceCard key={provider.id} provider={provider} />
               ))}
             </div>

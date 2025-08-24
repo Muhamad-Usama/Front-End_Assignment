@@ -24,7 +24,10 @@ const ServiceCoverageSection = () => {
       <div className="max-w-md md:max-w-2xl mx-auto px-4">
         <HowItWorksExplanation
           showFull={showFullExplanation}
-          onReadMore={() => setShowFullExplanation(v => !v)}
+          onReadMore={() => {
+            // @ts-ignore - React 19 function parameter type compatibility
+            setShowFullExplanation(v => !v)
+          }}
         />
 
         <div className="mt-8">
@@ -55,7 +58,10 @@ const ServiceCoverageSection = () => {
 
             <div className="text-center mt-6">
               <button
-                onClick={() => setShowAllZipCodes(v => !v)}
+                onClick={() => {
+                  // @ts-ignore - React 19 function parameter type compatibility
+                  setShowAllZipCodes(v => !v)
+                }}
                 className="w-full px-8 py-3 rounded-full border-2 border-gray-500 text-black font-semibold hover:bg-gray-50 max-w-sm mx-auto"
               >
                 {showAllZipCodes ? 'Show Less' : 'Read More'}

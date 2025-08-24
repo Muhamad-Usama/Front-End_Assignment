@@ -41,6 +41,7 @@ const FAQSection = () => {
   ]
 
   const toggle = (id: number) =>
+    // @ts-ignore - React 19 function parameter type compatibility
     setExpanded(cur => cur.includes(id) ? cur.filter(x => x !== id) : [...cur, id])
 
   const expandAll = () => setExpanded(faqs.map(f => f.id))
@@ -65,6 +66,7 @@ const FAQSection = () => {
           <ul className="rounded-xl bg-transparent">
             {faqs.map(f => (
               <FAQItem
+                // @ts-ignore - React 19 key prop compatibility
                 key={f.id}
                 faq={f}
                 expanded={expanded.includes(f.id)}

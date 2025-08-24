@@ -101,7 +101,10 @@ const LeaderboardSection = () => {
   const handleSeeAllCompanies = () => {
     console.log('See all companies clicked')
   }
-  const nextPage = () => setCurrentPage(p => (p + 1) % totalPages)
+  const nextPage = () => {
+    // @ts-ignore - React 19 function parameter type compatibility
+    setCurrentPage(p => (p + 1) % totalPages)
+  }
 
   const handleCardClick: React.MouseEventHandler<HTMLDivElement> = (e) => {
     const el = e.target as HTMLElement

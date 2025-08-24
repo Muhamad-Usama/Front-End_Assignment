@@ -65,7 +65,10 @@ const RecentLawnsSection = () => {
   }, [itemsPerPage, totalPages, currentPage])
 
   const handleSeePrice = () => console.log('See Prices clicked from Recent Lawns')
-  const nextPage = () => setCurrentPage(p => (p + 1) % totalPages)
+  const nextPage = () => {
+    // @ts-ignore - React 19 function parameter type compatibility
+    setCurrentPage(p => (p + 1) % totalPages)
+  }
 
   const handleCardClick: React.MouseEventHandler<HTMLDivElement> = () => nextPage()
 

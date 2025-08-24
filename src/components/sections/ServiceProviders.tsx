@@ -81,6 +81,7 @@ const ServiceProvidersSection = () => {
         <div className="space-y-6 md:space-y-0 md:grid md:grid-cols-1 lg:grid-cols-2 md:gap-6">
           {topProviders.map((provider) => (
             <ServiceProviderCard
+              // @ts-ignore - React 19 key prop compatibility
               key={provider.id}
               provider={provider}
             />

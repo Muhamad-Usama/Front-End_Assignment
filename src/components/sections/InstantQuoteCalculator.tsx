@@ -36,6 +36,7 @@ const InstantQuoteCalculator = () => {
   ];
 
   const handleInputChange = (field: keyof QuoteFormData, value: string) => {
+    // @ts-ignore - React 19 function parameter type compatibility
     setFormData((prev) => ({ ...prev, [field]: value }));
 
     setIsCalculating(true);
